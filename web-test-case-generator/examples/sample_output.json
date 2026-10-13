@@ -1,0 +1,69 @@
+{
+  "feature_name": "User Login",
+  "scenarios": [
+    {
+      "scenario_id": "TS-001",
+      "title": "Login with valid credentials",
+      "type": "positive",
+      "objective": "Verify that a registered user can sign in."
+    },
+    {
+      "scenario_id": "TS-002",
+      "title": "Login with invalid credentials",
+      "type": "negative",
+      "objective": "Verify that invalid credentials do not grant access."
+    },
+    {
+      "scenario_id": "TS-003",
+      "title": "Submit login without a required field",
+      "type": "boundary",
+      "objective": "Verify handling of missing required input."
+    }
+  ],
+  "test_cases": [
+    {
+      "test_case_id": "TC-001",
+      "scenario_id": "TS-001",
+      "title": "Successful login",
+      "type": "positive",
+      "preconditions": [
+        "A test account exists."
+      ],
+      "steps": [
+        "Open the login page.",
+        "Enter valid test credentials.",
+        "Submit the login form."
+      ],
+      "expected_result": "The user is authenticated and redirected to the authenticated area."
+    },
+    {
+      "test_case_id": "TC-002",
+      "scenario_id": "TS-002",
+      "title": "Reject invalid credentials",
+      "type": "negative",
+      "preconditions": [
+        "The login page is available."
+      ],
+      "steps": [
+        "Enter invalid test credentials.",
+        "Submit the login form."
+      ],
+      "expected_result": "Authentication is denied and the user receives an appropriate error."
+    },
+    {
+      "test_case_id": "TC-003",
+      "scenario_id": "TS-003",
+      "title": "Submit without username",
+      "type": "boundary",
+      "preconditions": [
+        "The login page is available."
+      ],
+      "steps": [
+        "Leave the username field empty.",
+        "Enter a password.",
+        "Submit the form."
+      ],
+      "expected_result": "The required username is validated and authentication is not granted."
+    }
+  ]
+}

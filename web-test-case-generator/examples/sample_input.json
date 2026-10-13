@@ -1,0 +1,29 @@
+{
+  "feature_name": "User Login",
+  "description": "Allow registered users to sign in to an application.",
+  "fields": [
+    {
+      "name": "username",
+      "required": true,
+      "constraints": [
+        "Must identify a registered user"
+      ]
+    },
+    {
+      "name": "password",
+      "required": true,
+      "constraints": [
+        "Must satisfy the account authentication policy"
+      ]
+    }
+  ],
+  "business_rules": [
+    "Successful authentication opens the authenticated user area.",
+    "Invalid credentials must not grant access."
+  ],
+  "requested_coverage": [
+    "positive",
+    "negative",
+    "boundary"
+  ]
+}

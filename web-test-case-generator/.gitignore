@@ -1,0 +1,30 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and generated outputs
+*.log
+logs/
+output/
+outputs/
+.ipynb_checkpoints/
+
+# Local and confidential data
+local_data/
+private_data/

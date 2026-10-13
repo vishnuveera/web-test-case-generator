@@ -1,0 +1,17 @@
+# Initial candidate dependency list.
+# Verify imports and supported versions before releasing.
+
+Flask
+langchain
+langchain-core
+langchain-openai
+openai
+azure-identity
+azure-ai-textanalytics
+psycopg2-binary
+pypdfium2
+pdfplumber
+tiktoken
+tqdm
+python-dotenv
+pytest
